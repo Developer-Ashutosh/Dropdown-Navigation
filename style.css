@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.3s;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    background-color: var(--Almost-White);
+}
+
+a {
+    text-decoration: none;
+    color: var(--Medium-Gray);
+    font-size: 15px;
+}
+
+a:hover {
+    color: var(--Almost-Black);
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid var(--Almost-Black);
+    color: var(--Medium-Gray);
+    background-color: var(--Almost-White);
+}
+
+button:hover {
+    color: var(--Almost-Black);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    height: fit-content;
+    width: 100%;
+    padding: 2% 3%;
+}
+
+header>a>img {
+    cursor: pointer;
+}
+
+header>a>img:hover {
+    scale: 1.1;
+}
+
+nav {
+    padding: 0 3%;
+    height: 100%;
+    width: 100%;
+}
+
+nav .left {
+    width: 40%;
+}
+
+.left ul {
+    width: 80%;
+}
+
+.left ul li a img {
+    height: 7px;
+}
+
+.drop-content {
+    position: absolute;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--Almost-White);
+    padding: 18px;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px var(--Medium-Gray);
+}
+
+.drop-content span {
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.drop-content span:hover {
+    background-color: hsla(0, 0%, 85%);
+}
+
+.right {
+    width: fit-content;
+}
+
+.right button:first-child {
+    border: none;
+}
+
+main {
+    height: 75%;
+    width: 85%;
+    padding: 2.5%;
+    margin: auto;
+}
+
+main section {
+    width: 50%;
+}
+
+section h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+section p {
+    font-size: 18px;
+    color: var(--Medium-Gray);
+    font-weight: 500;
+    line-height: 1.5rem;
+    width: 80%;
+    margin: 2.5rem 0;
+}
+
+section button {
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    margin-bottom: 3.5rem;
+}
+
+section button:hover {
+    background-color: var(--Almost-White);
+}
+
+section div {
+    width: 90%;
+}
+
+main .hero-image {
+    height: 100%;
+    width: 30%;
+    background-image: url('./images/image-hero-desktop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.attribution {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Responsive Design Starts */
+
+@media (width<=1140px) {
+    nav {
+        padding-right: 4%;
+    }
+
+    nav .left {
+        width: 50%;
+    }
+
+    section h1 {
+        line-height: 3.5rem;
+    }
+
+    section p {
+        width: 85%;
+    }
+
+    section div {
+        width: 100%;
+    }
+
+    main .hero-image {
+        width: 35%;
+    }
+
+}
+
+@media (width<=960px) {
+
+    header {
+        flex-direction: column;
+        padding-top: 5%;
+    }
+
+    header>a {
+        align-self: flex-start;
+        margin-left: 3%;
+    }
+
+    nav {
+        position: relative;
+        margin-top: 25px;
+    }
+
+    nav .right {
+        position: absolute;
+        right: 0;
+        top: -69px;
+    }
+
+    nav .left {
+        width: 40%;
+    }
+
+    .left ul {
+        width: 100%;
+    }
+
+    section h1 {
+        font-size: 3rem;
+    }
+
+    section p {
+        width: 90%;
+        font-size: 16.5px;
+    }
+
+    section div img {
+        width: 20%;
+    }
+
+}
+
+@media (width<=835px) {
+
+    nav .left {
+        width: 45%;
+    }
+
+    section p {
+        font-size: 15px;
+        margin: 2rem 0;
+    }
+
+    main .hero-image {
+        width: 40%;
+    }
+}
+
+
+@media (width<=790px) {
+
+    nav .left {
+        width: 65%;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        margin-top: 7%;
+    }
+
+    main section {
+        width: 100%;
+        text-align: center;
+    }
+
+    section p {
+        margin: 1.5rem auto;
+    }
+
+    section button {
+        margin-bottom: 2.5rem;
+    }
+
+    section div {
+        width: 80%;
+        margin: auto;
+    }
+
+    section div img {
+        width: 15%;
+    }
+
+    main .hero-image {
+        width: 55%;
+        background-image: url('./images/image-hero-mobile.png');
+    }
+}
